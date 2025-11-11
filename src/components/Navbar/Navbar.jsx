@@ -36,6 +36,9 @@ const Navbar = ({ setShowLogin }) => {
               <Link to="/design" onClick={() => setShowDropdown(false)}>Making</Link>
               <Link to="/development" onClick={() => setShowDropdown(false)}>Development</Link>
               <Link to="/marketing" onClick={() => setShowDropdown(false)}>Marketing</Link>
+              <Link to="/nearby" onClick={() => setShowMobileDropdown(false)}>shopflow</Link>
+              <Link to="/orders" onClick={() => setShowMobileDropdown(false)}>Orders</Link>
+
             </div>
           )}
         </div>
@@ -58,6 +61,9 @@ const Navbar = ({ setShowLogin }) => {
               <Link to="/design" onClick={() => setShowMobileDropdown(false)}>Store</Link>
               <Link to="/development" onClick={() => setShowMobileDropdown(false)}>Development</Link>
               <Link to="/marketing" onClick={() => setShowMobileDropdown(false)}>Marketing</Link>
+              <Link to="/nearby" onClick={() => setShowMobileDropdown(false)}>shopflow</Link>
+              <Link to="/orders" onClick={() => setShowMobileDropdown(false)}>Orders</Link>
+
             </div>
           )}
         </div>

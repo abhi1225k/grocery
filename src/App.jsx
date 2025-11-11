@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import Navbar from './components/Navbar/Navbar'
-import { Route, Routes } from 'react-router-dom'
+import { Route, Routes, useLocation } from 'react-router-dom'
 import Home from './pages/Home/Home'
 import Cart from './pages/Cart/Cart'
 import PlaceOrder from './pages/PlaceOrder/PlaceOrder'
@@ -9,6 +9,8 @@ import LoginPopup from './components/LoginPopup/LoginPopup'
 import Design from './pages/Design/Design'
 import Development from './pages/Development/Development'
 import Marketing from './pages/Marketing/Marketing'
+import ShopFlow from './components/ShopFlow/ShopFlow'
+import Orders from './pages/Orders/Orders'
 
 
 
@@ -17,6 +19,8 @@ import Marketing from './pages/Marketing/Marketing'
 const App = () => {
 
   const [showLogin, setShowLogin] = useState(false)
+
+  const location = useLocation();
 
   return (
     <>
@@ -30,12 +34,12 @@ const App = () => {
           <Route path="/design" element={<Design />} />
           <Route path="/development" element={<Development />} />
           <Route path="/marketing" element={<Marketing />} />
-
-
+          <Route path="/nearby" element={<ShopFlow/>} />
+          <Route path="/order" element={<Orders/>} />
         </Routes>
       </div>
 
-      <Footer />
+      {location.pathname!=="/nearby"&&<Footer />}
     </>
   )
 }
