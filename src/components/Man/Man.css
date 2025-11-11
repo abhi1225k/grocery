@@ -1,0 +1,15 @@
+.man{
+  background-color: #f8f9fa;
+  padding: 60px 20px;
+  text-align: center;
+  border-radius: 12px;
+  margin-bottom: 100px; /* ensures footer doesn’t overlap */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+.man p {
+  max-width: 700px;
+  margin: 0 auto;
+  color: #555;
+  font-size: 1.1rem;
+  line-height: 1.5;
+}

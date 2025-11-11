@@ -1,0 +1,91 @@
+.owner {
+  background-color: #f8f9fa;
+  padding: 60px 20px;
+  text-align: center;
+  border-radius: 12px;
+  margin-bottom: 100px; /* ensures footer doesn’t overlap */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.owner h2 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+.owner .our-strengths .trophy-3{
+    left: 30px;
+}
+
+.owner .our-strengths {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+  flex-wrap: nowrap;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.owner img {
+  width: 100px;
+  height: auto;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.owner img:hover {
+  transform: scale(1.05);
+}
+
+.owner p {
+  max-width: 700px;
+  margin: 0 auto;
+  color: #555;
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+.trophy-row {
+  display: flex;
+  flex-direction: row;        /* horizontal */
+  justify-content: center;    /* center the row */
+  gap: 20px;                  /* space between items */
+  align-items: center; 
+  text-align: center;       /* vertical alignment */
+  flex-wrap: nowrap;          /* keep in one line */
+}
+
+.trophy-3{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  .owner {
+    padding: 30px 10px;
+  }
+
+  .owner-strength h1 {
+    font-size: 1.5rem;
+  }
+
+  .owner-strength h2 {
+    font-size: 1rem;
+  }
+
+  .trophy-row {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .trophy-item {
+    width: 90%;
+  }
+
+  .trophy-item img {
+    height: 50px;
+  }
+}

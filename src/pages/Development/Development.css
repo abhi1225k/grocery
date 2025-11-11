@@ -1,0 +1,39 @@
+.dev-page{
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 24px;
+  font-family: system-ui, sans-serif;
+  line-height: 1.6;
+}
+
+h1{
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+p{
+  color: #555;
+}
+
+.dev-section{
+  margin-top: 32px;
+  padding: 18px;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  background: #f9fafb;
+}
+
+.dev-section h2{
+  margin: 0 0 10px;
+  font-size: 22px;
+}
+
+ul{
+  padding-left: 20px;
+}
+
+ul li{
+  margin: 6px 0;
+  font-size: 16px;
+}

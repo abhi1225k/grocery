@@ -1,0 +1,157 @@
+/* ---------- Base ---------- */
+:root{
+  --bg:#ffffff;
+  --text:#111827;
+  --muted:#6b7280;
+  --line:#e5e7eb;
+  --brand:#22c55e;
+  --brand-dark:#16a34a;
+  --dark:#111827;
+  --soft:#f9fafb;
+}
+
+*{ box-sizing:border-box; }
+html,body{ margin:0; padding:0; background:var(--bg); color:var(--text); font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue",Arial; }
+img{ max-width:100%; display:block; }
+
+.design-page{ max-width:1200px; margin:0 auto; padding:24px; }
+
+/* ---------- Buttons ---------- */
+.btn{
+  border:1px solid var(--line);
+  background:#fff;
+  color:var(--text);
+  padding:10px 16px;
+  border-radius:12px;
+  cursor:pointer;
+  transition:transform .15s ease, box-shadow .15s ease, background .15s ease, color .15s ease;
+}
+.btn:hover{ transform:translateY(-1px); box-shadow:0 6px 18px rgba(0,0,0,.06); }
+.btn.primary{ background:var(--brand); color:#fff; border-color:var(--brand); }
+.btn.primary:hover{ background:var(--brand-dark); border-color:var(--brand-dark); }
+.btn.outline{ background:transparent; }
+.btn.dark{ background:var(--dark); color:#fff; border-color:var(--dark); }
+.btn.small{ padding:8px 12px; border-radius:10px; }
+
+/* ---------- Hero ---------- */
+.hero{
+  display:grid;
+  grid-template-columns:1.2fr 1fr;
+  gap:28px;
+  align-items:center;
+  margin-bottom:40px;
+}
+.hero-left h1{ font-size:40px; line-height:1.1; margin:0 0 10px; }
+.hero-left p{ color:var(--muted); margin:0 0 12px; }
+.hero-buttons{ display:flex; gap:12px; margin:14px 0; }
+.highlights{ margin:8px 0 0; padding-left:18px; color:#374151; }
+.highlights li{ margin:6px 0; }
+
+.hero-right .image-placeholder{
+  width:100%;
+  min-height:280px;
+  border:2px dashed var(--line);
+  border-radius:16px;
+  display:flex; align-items:center; justify-content:center;
+  background:var(--soft);
+  color:var(--muted); font-weight:600;
+}
+
+/* ---------- Sections ---------- */
+.section{ margin:48px 0; }
+.section h2{ margin:0 0 14px; }
+
+/* ---------- Categories ---------- */
+.categories{
+  display:grid;
+  grid-template-columns:repeat(6,1fr);
+  gap:14px;
+}
+.cat-box{
+  background:var(--soft);
+  border:1px solid var(--line);
+  padding:18px 12px;
+  border-radius:14px;
+  text-align:center;
+  font-weight:600;
+  transition:transform .15s ease, box-shadow .15s ease, border-color .15s ease;
+}
+.cat-box:hover{
+  transform:translateY(-2px);
+  box-shadow:0 10px 20px rgba(0,0,0,.05);
+  border-color:#d1d5db;
+}
+
+/* ---------- Offer Banner ---------- */
+.offer{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:16px;
+  margin:40px 0;
+  padding:22px 20px;
+  border-radius:16px;
+  border:1px solid #a7f3d0;
+  background:linear-gradient(90deg,#dcfce7,#bbf7d0);
+}
+.offer h3{ margin:0; }
+.offer p{ margin:0; color:#065f46; font-weight:600; }
+
+/* ---------- Products ---------- */
+.products{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:16px;
+}
+.product-card{
+  border:1px solid var(--line);
+  border-radius:14px;
+  background:#fff;
+  overflow:hidden;
+  display:flex; flex-direction:column;
+  transition:transform .15s ease, box-shadow .15s ease;
+}
+.product-card:hover{ transform:translateY(-2px); box-shadow:0 12px 24px rgba(0,0,0,.06); }
+
+.product-card .image-placeholder{
+  height:140px;
+  background:#f3f4f6;
+  border-bottom:1px solid var(--line);
+  display:flex; align-items:center; justify-content:center;
+  color:var(--muted); font-weight:600;
+}
+.product-card .image-placeholder.small{ height:130px; }
+
+.product-card h4{ margin:12px 12px 4px; font-size:16px; }
+.product-card p{ margin:0 12px 10px; font-weight:700; }
+.product-card .btn{ margin:0 12px 14px; }
+
+/* ---------- Trust Strip ---------- */
+.trust{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:12px;
+  margin:40px 0 10px;
+}
+.trust > div{
+  text-align:center;
+  background:#f3f4f6;
+  border:1px solid var(--line);
+  padding:12px;
+  border-radius:12px;
+  font-weight:600;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width:1024px){
+  .hero{ grid-template-columns:1fr; }
+  .categories{ grid-template-columns:repeat(3,1fr); }
+  .products{ grid-template-columns:repeat(3,1fr); }
+  .trust{ grid-template-columns:repeat(2,1fr); }
+}
+@media (max-width:640px){
+  .design-page{ padding:16px; }
+  .hero-left h1{ font-size:32px; }
+  .categories{ grid-template-columns:repeat(2,1fr); }
+  .products{ grid-template-columns:repeat(2,1fr); }
+}
